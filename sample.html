@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>----</title>
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body class="bg-light">
+
+  <!-- 全体の要素をまるっと囲むdiv要素、`container`だと幅固定、`container-fluid`だとブラウザ幅で変動 -->
+  <div class="container">
+
+    <!-- `py-` は、`padding-top` と `padding-bottom` の両方を意味する。この場合は、タイトルの上下に余白を作る。数字は大きさ -->
+    <div class="py-5 text-center">
+      <h1>Example form</h1>
+      <p class="lead">Below is an example form built entirely with Bootstrap's form controls.</p>
+    </div>
+
+    <!-- `class="row"` は複数のカラムを横一列に並べる際に利用。カラムの幅は、 `col col-md-8` などで調整 -->
+    <div class="row">
+      <!-- この場合（col-md-8）は、スマフォ以上のサイズで `container` に囲まれた要素全体を12カラムと考えて8つ分の幅に -->
+      <!-- `mx-auto` は親要素 `.container` の幅のうち8カラムを使うが余った4カラム分は左右のマージンとして自動調整して中央配置 -->
+      <!-- `mx-auto` を除去すれば左寄せで配置される -->
+      <div class="col-md-8 mx-auto">
+
+        <h4 class="mb-3">Billing address</h4>
+
+        <form>
+
+          <!-- `class="row"` はさらに入れ子にすることもできる。以下は、親にあたる `col-md-8` を全体の横幅（12カラム）と考えて、以下の2つのカラムを `col-md-6` とすることで2つのカラムを同じ幅で横並び（足して12カラム）と考える -->
+          <div class="row">
+            <!-- `mb-` は `margin-bottom` の略。下にマージンを付ける -->
+            <div class="col-md-6 mb-3">
+              <label for="firstName">First name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="lastName">Last name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="email">Email <span class="text-muted">(Optional)</span></label>
+            <input type="email" class="form-control" id="email" placeholder="you@example.com">
+          </div>
+
+          <div class="mb-3">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <label for="country">Country</label>
+              <select class="custom-select d-block w-100" id="country" required>
+                <option value="">Choose...</option>
+                <option>United States</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="state">State</label>
+              <select class="custom-select d-block w-100" id="state" required>
+                <option value="">Choose...</option>
+                <option>California</option>
+              </select>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="zip">Zip</label>
+              <input type="text" class="form-control" id="zip" placeholder="" required>
+            </div>
+          </div>
+
+          <hr class="mb-4">
+
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="same-address">
+            <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="save-info">
+            <label class="custom-control-label" for="save-info">Save this information for next time</label>
+          </div>
+
+          <hr class="mb-4">
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="cc-name">Name on card</label>
+              <input type="text" class="form-control" id="cc-name" placeholder="" required>
+              <small class="text-muted">Full name as displayed on card</small>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="cc-number">Credit card number</label>
+              <input type="text" class="form-control" id="cc-number" placeholder="" required>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3 mb-3">
+              <label for="cc-expiration">Expiration</label>
+              <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="cc-cvv">CVV</label>
+              <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+            </div>
+          </div>
+
+          <hr class="mb-4">
+
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+
+        </form>
+
+      </div>
+    </div>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">&copy; 2017-2018 Company Name</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+      </ul>
+    </footer>
+
+  </div>
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>
